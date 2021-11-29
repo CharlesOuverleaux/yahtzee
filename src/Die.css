@@ -1,0 +1,65 @@
+/* Original Styles For Numbers, before icons added in */
+/* .Die {
+  font-size: 25px;
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  font-family: monospace;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  margin-right: 1em;
+} */
+
+/* THE NICER STYLES MADE FOR THE FONT-AWESOME ICONS... */
+
+.Die {
+  color: white;
+  text-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 0.1em;
+}
+
+.Die-locked {
+  opacity: 0.5;
+  text-shadow: none;
+}
+
+.Die:not(.Die-locked):hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.shaking {
+  animation-name: wobble;
+  animation-duration: 1s;
+}
+
+@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
